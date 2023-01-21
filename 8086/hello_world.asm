@@ -5,7 +5,7 @@
 .stack 100h
 
 .data
-msg db "Hello world$"
+msg db "Hello world!!$"
 
 .code
 main proc
