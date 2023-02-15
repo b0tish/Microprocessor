@@ -1,3 +1,6 @@
+.model small
+.stack
+
 .data
 string1 db "Enter the first number: $"
 string2 db 13,10,"Enter the second number: $"

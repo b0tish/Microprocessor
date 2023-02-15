@@ -16,7 +16,7 @@ main proc
         mov ah, 02h
         int 21h
         dec si
-        loop REPEAT
+    loop REPEAT
     .exit
 main endp
 end main

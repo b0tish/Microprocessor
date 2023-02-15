@@ -22,7 +22,7 @@ main proc
         mov [di], bx
         inc si
         inc di
-        loop again1
+    loop again1
     
     mov si, offset str2
     mov cx, 18
@@ -31,14 +31,13 @@ main proc
         mov [di], bx
         inc si
         inc di 
-        loop again2
+    loop again2
     mov [di], "$"
     mov dx, offset str3
     
     mov ah, 09h
     int 21h
     
-    mov ah, 4ch
-    int 21h
+    .exit
 main endp
 end main

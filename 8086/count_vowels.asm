@@ -3,11 +3,11 @@
 
 .data
 string db "microprocessor$"
+string2 db "Vowels:$"
 
 .code
 main proc
     .startup
-    mov bh, 0
     mov cx, 14
     mov si, offset string
     
@@ -32,12 +32,19 @@ main proc
             inc bl
         SKIP:
             inc si
-        loop AGAIN
+    loop AGAIN
+     
+    
+     
+     lea dx,string2
+     mov ah,09h
+     int 21h
      
      add bl, 30h 
      mov dl, bl
-     
+ 
      mov ah, 02h
+     
      int 21h
      .exit  
 main endp

@@ -2,26 +2,27 @@
 .stack
 
 .data
-num DW 49
+num dw 25 
+string1 db "Square root:$"
 
 .code
 main proc
-    .startup 
-    mov bl,0
+    .startup
+    mov dx,offset string1
+    mov ah,09h
+    int 21h
     
     again:
         inc bl
         mov ax,num
         div bl
         cmp al,bl
-        jne again
-
+    jne again
+        
     aam
-    add ax,30h
-    mov bl,al
-    mov dl,ah
+    add al,30h
+    mov dl,al
     mov ah,02h
-    mov dl,bl
     int 21h
     .exit
 main endp
